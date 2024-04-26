@@ -1,0 +1,28 @@
+{
+  "name": "dn-sql-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "cssFix": "npx stylelint \"./app/style.css\" --fix",
+    "htmlFix": "npx prettier \"./app/index.html\" --write"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "gulp": "^5.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss-scss": "^4.0.9",
+    "sass": "^1.75.0",
+    "stylelint": "^16.3.1",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^6.0.4"
+  }
+}

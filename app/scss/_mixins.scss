@@ -1,0 +1,10 @@
+@mixin standart-border {
+  border: 1px dotted gray;
+  border-radius: 10px;
+}
+
+@mixin standart-text {
+  color: $primary;
+  font-family: sans-serif;
+  font-size: 12px;
+}

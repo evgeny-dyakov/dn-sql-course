@@ -1,0 +1,13 @@
+.footer {
+  height: 200px;
+  padding: 20px;
+  margin: 20px;
+
+  @include standart-border;
+
+  &__text {
+    margin: 0;
+
+    @include standart-text;
+  }
+}
