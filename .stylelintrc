@@ -1,7 +1,6 @@
 {
   "extends": [
-    "stylelint-config-standard-scss",
-    "stylelint-config-idiomatic-order"
+    "stylelint-config-standard-scss"
   ],
   "overrides": [
     {
@@ -9,8 +8,9 @@
       "customSyntax": "postcss-scss"
     }
   ],
-  "plugins": ["stylelint-order"],
   "rules": {
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "font-family-name-quotes": "always-unless-keyword",
+    "media-feature-range-notation": "prefix"
   }
 }
