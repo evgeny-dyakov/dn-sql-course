@@ -12,8 +12,8 @@ html {
 
 .page {
   min-width: 360px;
-  height: 2000px;
   margin: 0;
+  padding: 0 0 500px;
 }
 
 .container {
@@ -39,9 +39,58 @@ html {
   }
 }
 
+.main-text {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 1.38;
+  font-weight: 400;
+  color: var(--light-color);
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 32px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent-color-200);
+  text-decoration: none;
+  background: var(--light-color);
+  border-radius: 8px;
+  transition: ease-in var(--transition-duration);
+}
+
+@media(hover: hover) {
+  .button:hover {
+    color: var(--light-color);
+    background: var(--accent-color-100);
+  }
+
+  .button:active {
+    background: var(--accent-color-300);
+    transition-duration: 0ms;
+  }
+}
+
+@media(hover: none) {
+  .button:active {
+    color: var(--light-color);
+    background: var(--accent-color-300);
+    transition-duration: 0ms;
+  }
+}
+
 @media(max-width: $tablet) {
   .container {
     padding: 0 30px;
+  }
+
+  .main-text {
+    font-size: 14px;
+    line-height: 1.42;
   }
 }
 

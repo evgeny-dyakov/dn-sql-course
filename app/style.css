@@ -37,6 +37,10 @@
   --font-secondary: "play", sans-serif;
   --light-color: #fff;
   --dark-color: #141414;
+  --accent-color-100: #9849ad;
+  --accent-color-200: #871da1;
+  --accent-color-300: #6d0e84;
+  --transition-duration: 120ms;
 }
 
 /*** *** general *** ***/
@@ -52,8 +56,8 @@ html {
 
 .page {
   min-width: 360px;
-  height: 2000px;
   margin: 0;
+  padding: 0 0 500px;
 }
 
 .container {
@@ -79,9 +83,58 @@ html {
   letter-spacing: 1px;
 }
 
+.main-text {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 1.38;
+  font-weight: 400;
+  color: var(--light-color);
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 32px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent-color-200);
+  text-decoration: none;
+  background: var(--light-color);
+  border-radius: 8px;
+  transition: ease-in var(--transition-duration);
+}
+
+@media (hover: hover) {
+  .button:hover {
+    color: var(--light-color);
+    background: var(--accent-color-100);
+  }
+
+  .button:active {
+    background: var(--accent-color-300);
+    transition-duration: 0ms;
+  }
+}
+
+@media (hover: none) {
+  .button:active {
+    color: var(--light-color);
+    background: var(--accent-color-300);
+    transition-duration: 0ms;
+  }
+}
+
 @media (max-width: 1024px) {
   .container {
     padding: 0 30px;
+  }
+
+  .main-text {
+    font-size: 14px;
+    line-height: 1.42;
   }
 }
 
@@ -103,7 +156,7 @@ html {
 
 /*** *** whom-section *** ***/
 .whom {
-  padding: 100px 0;
+  padding: 40px 0;
   font-family: var(--font-primary);
   color: var(--light-color);
   background: var(--dark-color);
@@ -217,5 +270,172 @@ html {
     right: 0;
     bottom: 0;
     translate: none;
+  }
+}
+
+.about {
+  padding: 120px 0 162px;
+  background: var(--dark-color);
+}
+
+.about__title {
+  margin: 0 0 40px;
+}
+
+.about__video {
+  position: relative;
+  width: 83%;
+  margin: 0 auto;
+  padding: 46.7% 0 0;
+}
+
+.about__video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: none;
+}
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 65px 0 104px;
+  }
+
+  .about__video {
+    width: 100%;
+    padding: 56.3% 0 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .about {
+    padding: 24px 0 67px;
+  }
+
+  .about__title {
+    margin: 0 0 25px;
+  }
+
+  .about__video iframe {
+    border-radius: 10px;
+  }
+}
+
+.includes {
+  padding: 49px 0 55px;
+  font-family: var(--font-primary);
+  color: var(--light-color);
+  background: var(--accent-color-200);
+}
+
+.includes__wrapper {
+  display: grid;
+  grid-template-columns: 50.8% auto;
+  align-items: end;
+  margin: 0 0 31px;
+}
+
+.includes__title {
+  margin: 0 0 24px;
+}
+
+.includes__main-text {
+  max-width: 520px;
+  padding: 0 20px 0 0;
+}
+
+.includes__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32.5px 20px;
+  grid-column: 2/4;
+  grid-row: 1/4;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.includes__list-number {
+  margin: 0 0 3.8px;
+  font-family: var(--font-secondary);
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.includes__list-description {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .includes {
+    padding: 47.8px 0 64px;
+  }
+
+  .includes__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .includes__wrapper {
+    grid-template-columns: 1fr;
+    margin: 0 0 57px;
+  }
+
+  .includes__title {
+    margin: 0 0 25px;
+  }
+
+  .includes__main-text {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .includes__list {
+    grid-template-columns: 47.4% 52.6%;
+    grid-column: auto;
+    grid-row: auto;
+    margin: 33px 0 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .includes {
+    padding: 33px 0 49px;
+  }
+
+  .includes__wrapper {
+    margin: 0 0 40px;
+  }
+
+  .includes__title {
+    margin: 0 0 16px;
+  }
+
+  .includes__list-number {
+    font-size: 40px;
+  }
+
+  .includes__list-description {
+    font-size: 14px;
+  }
+
+  .includes__list {
+    grid-template-columns: 46.7% 53.3%;
+    margin: 24px 0 0;
+    gap: 23.5px 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .includes__button {
+    width: 100%;
+    padding: 16px 24px;
   }
 }
