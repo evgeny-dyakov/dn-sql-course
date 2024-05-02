@@ -105,6 +105,7 @@ html {
   background: var(--light-color);
   border-radius: 8px;
   transition: ease-in var(--transition-duration);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
 }
 
 @media (hover: hover) {
@@ -112,19 +113,11 @@ html {
     color: var(--light-color);
     background: var(--accent-color-100);
   }
-
-  .button:active {
-    background: var(--accent-color-300);
-    transition-duration: 0ms;
-  }
 }
 
-@media (hover: none) {
-  .button:active {
-    color: var(--light-color);
-    background: var(--accent-color-300);
-    transition-duration: 0ms;
-  }
+.button:active {
+  color: var(--light-color);
+  background: var(--accent-color-300);
 }
 
 @media (max-width: 1024px) {
