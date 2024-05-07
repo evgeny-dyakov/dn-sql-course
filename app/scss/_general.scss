@@ -10,10 +10,15 @@ html {
   scroll-behavior: smooth;
 }
 
-.page {
+body {
   min-width: 360px;
   margin: 0;
-  padding: 0 0 500px;
+  padding: 100px 0;
+  background: green;
+}
+
+main {
+  overflow: hidden;
 }
 
 .container {
@@ -27,6 +32,12 @@ html {
   font-family: var(--font-secondary);
   font-weight: 700;
   color: var(--light-color);
+
+  &--h1 {
+    font-size: 64px;
+    line-height: 1.3;
+    letter-spacing: 2.6px;
+  }
 
   &--h2 {
     font-size: 32px;
@@ -48,6 +59,10 @@ html {
   color: var(--light-color);
 }
 
+.nobr {
+  white-space: nowrap;
+}
+
 .button {
   display: inline-block;
   padding: 16px 32px;
@@ -60,8 +75,12 @@ html {
   text-decoration: none;
   background: var(--light-color);
   border-radius: 8px;
-  transition: ease-in var(--transition-duration);
+  transition: var(--t-timing-function) var(--t-duration);
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+
+  &--small {
+    padding: 12px 24px;
+  }
 }
 
 @media(hover: hover) {
@@ -76,9 +95,79 @@ html {
   background: var(--accent-color-300);
 }
 
+.social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__link {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--light-color);
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+
+  svg path {
+    fill: currentcolor;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    background: var(--light-color);
+    opacity: .15;
+    transition: var(--t-timing-function) var(--t-duration);
+  }
+}
+
+@media(hover: hover) {
+  .social__link:hover::before {
+    opacity: .2;
+  }
+}
+
+.social__link:active::before {
+  opacity: .5;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 @media(max-width: $tablet) {
   .container {
     padding: 0 30px;
+  }
+
+  .title {
+    &--h1 {
+      font-size: 48px;
+      letter-spacing: 1.9px;
+    }
   }
 
   .main-text {
@@ -93,6 +182,12 @@ html {
   }
 
   .title {
+    &--h1 {
+      font-size: 32px;
+      line-height: 1.34;
+      letter-spacing: 1.3px;
+    }
+
     &--h2 {
       font-size: 24px;
       letter-spacing: 1px;
