@@ -1,3 +1,1 @@
-import {word} from './some.js'
-
-console.log(word)
+import './header.js'

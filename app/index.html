@@ -6,15 +6,61 @@
     <title>dn-sql-course</title>
     <link href="style.css" rel="stylesheet" />
   </head>
-  <body>
-    <main>
+  <body class="body">
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo logo" href="#main">
+          <img src="./img/logo.svg" alt="logo" width="184" loading="lazy" />
+        </a>
+        <button class="header__burger" type="button">
+          <span class="visually-hidden">Открыть/закрыть меню</span>
+          <span class="header__burger-t-el"></span>
+          <span class="header__burger-c-el"></span>
+          <span class="header__burger-b-el"></span>
+        </button>
+        <div class="header__menu">
+          <div class="header__menu-inner">
+            <nav class="header__navigation">
+              <ul class="header__navigation-links">
+                <li><a class="header__navigation-link" href="#about">О курсе</a></li>
+                <li><a class="header__navigation-link" href="#program">Программа</a></li>
+                <li><a class="header__navigation-link" href="#tariffs">Тарифы</a></li>
+              </ul>
+            </nav>
+            <ul class="header__social social">
+              <li>
+                <a class="social__link" href="https://www.youtube.com/@datanotes_ru" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" fill="none"><path fill="#871da1" d="M27.218 3.438C26.96 2.063 25.726 1.062 24.295.75 22.153.312 18.19 0 13.901 0 9.615 0 5.588.313 3.444.75 2.014 1.062.779 2 .52 3.438.26 5 0 7.188 0 10c0 2.813.259 5 .584 6.563.261 1.374 1.494 2.375 2.923 2.688 2.274.436 6.171.749 10.46.749 4.289 0 8.186-.313 10.46-.75 1.429-.312 2.662-1.25 2.923-2.688.26-1.562.584-3.813.65-6.562-.132-2.813-.457-5-.782-6.563ZM11.394 14.374v-8.75L19.32 10l-7.925 4.375Z" /></svg>
+                  <span class="visually-hidden">youtube</span>
+                </a>
+              </li>
+              <li>
+                <a class="social__link" href="https://t.me/datanotes_ru" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" fill="none"><path fill="#871da1" d="M1.752 9.028c8-3.416 18.354-7.58 19.783-8.155 3.749-1.509 4.9-1.22 4.326 2.12-.412 2.401-1.6 10.35-2.548 15.298-.562 2.933-1.823 3.281-3.806 2.012-.954-.61-5.767-3.7-6.812-4.424-.953-.661-2.268-1.456-.619-3.022.587-.558 4.434-4.122 7.432-6.897.393-.364-.1-.963-.554-.67-4.04 2.6-9.642 6.208-10.355 6.678-1.077.71-2.112 1.035-3.968.517-1.403-.39-2.774-.857-3.307-1.035-2.055-.684-1.567-1.57.428-2.422Z" /></svg>
+                  <span class="visually-hidden">telegram</span>
+                </a>
+              </li>
+            </ul>
+            <a class="header__login button button--small button--accent" href="https://ya.ru/?npr=1" target="_blank">Войти</a>
+            <a class="header__get-study button button--small" href="https://ya.ru/?npr=1" target="_blank">Начать обучение</a>
+            <div class="header__ask-question">
+              <p>Остались вопросы?</p>
+              <button type="button">Напиши</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__overlay header__overlay--none header__overlay--transparent"></div>
+    </header>
+
+    <main class="main" id="main">
       <section class="preview">
         <div class="preview__container container">
           <h1 class="preview__title title title--h1">
             Авторский курс
             <span>по SQL<img src="./img/new.svg" width="50" alt="new" loading="lazy" /></span>
           </h1>
-          <p class="preview__description">На курсе вы освоите составление продвинутых <span class="nobr">SQL-запросов</span> для различных задач, а уроки с понятной анимацией помогут легко запомнить темы. Приятным бонусом будет возможность задавать вопросы автору на онлайн-встречах.</p>
+          <p class="preview__description">На курсе вы освоите составление продвинутых <span class="nobr">SQL-запросов</span> для различных задач, а уроки с понятной анимацией помогут легко запомнить темы. Приятным бонусом будет возможность задавать вопросы автору на онлайн-встречах.</p>
           <a class="preview__button button button--small" href="https://ya.ru/?npr=1" target="_blank">Начать обучение</a>
           <ul class="social">
             <li>
@@ -61,7 +107,10 @@
 
       <section class="about">
         <div class="container">
-          <h2 class="about__title title title--h2">О курсе</h2>
+          <h2 class="about__title title title--h2">
+            О курсе
+            <span class="title__link" id="about"></span>
+          </h2>
           <div class="about__video">
             <iframe src="https://www.youtube.com/embed/96sXL-T12OI?si=U0wy0ihl-3DKquLW" width="500" height="282" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
@@ -93,6 +142,24 @@
             </ul>
           </div>
           <a class="includes__button button" href="https://ya.ru/?npr=1" target="_blank">Хочу присоединиться к обучению</a>
+        </div>
+      </section>
+
+      <section class="program">
+        <div class="container">
+          <h2 class="title title--h2">
+            Программа
+            <span class="title__link" id="program"></span>
+          </h2>
+        </div>
+      </section>
+
+      <section class="tariffs">
+        <div class="container">
+          <h2 class="title title--h2">
+            Тарифы
+            <span class="title__link" id="tariffs"></span>
+          </h2>
         </div>
       </section>
     </main>

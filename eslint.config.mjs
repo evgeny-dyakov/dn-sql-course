@@ -12,6 +12,7 @@ export default [
         document: 'readonly',
         exports: 'readonly',
         fetch: 'readonly',
+        getComputedStyle: 'readonly',
         require: 'readonly',
         setInterval: 'readonly',
         setTimeout: 'readonly',

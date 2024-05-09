@@ -1,6 +1,11 @@
 /*** *** variables *** ***/
 
+$tablet: 1024px;
+$mobile: 620px;
+
 :root {
+  --tablet: 1024px;
+  --mobile: 620px;
   --font-primary: "inter", sans-serif;
   --font-secondary: "play", sans-serif;
   --light-color: #fff;
@@ -10,12 +15,8 @@
   --accent-color-300: #6d0e84;
   --accent-color-400: #2b309e;
   --t-duration: 120ms;
+  --t-duration-mobile-menu: 300ms;
   --t-timing-function: ease;
-
+  --header-height: 72px;
+  --menu-mobile-width: 289px;
 }
-
-// $tablet: 768px;
-// $mobile: 375px;
-
-$tablet: 1024px;
-$mobile: 620px;
