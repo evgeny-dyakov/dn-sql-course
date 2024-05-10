@@ -508,6 +508,7 @@ html {
     height: calc(100dvh - var(--header-height));
     padding: 56px 32px 31px;
     overflow-y: scroll;
+    transition: var(--t-timing-function) var(--t-duration-mobile-menu);
   }
 
   .header__navigation {
@@ -704,7 +705,8 @@ html {
   z-index: 0;
 }
 
-.preview::before, .preview::after {
+.preview::before,
+.preview::after {
   content: "";
   position: absolute;
   z-index: -100;

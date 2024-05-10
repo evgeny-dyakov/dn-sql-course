@@ -233,6 +233,7 @@
     height: calc(100dvh - var(--header-height));
     padding: 56px 32px 31px;
     overflow-y: scroll;
+    transition: var(--t-timing-function) var(--t-duration-mobile-menu);
   }
 
   .header__navigation {
