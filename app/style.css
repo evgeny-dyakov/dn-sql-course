@@ -45,7 +45,7 @@
   --accent-color-400: #2d1243;
   --accent-color-500: #2b309e;
   --accent-color-600: #2c2c91;
-  --t-duration: 300ms;
+  --t-duration: 200ms;
   --t-timing-function: ease;
   --header-height: 72px;
   --menu-mobile-width: 289px;
@@ -1345,6 +1345,10 @@ html {
     rotate: -90deg;
   }
 
+  .accordion__answer {
+    opacity: 0;
+  }
+
   .accordion__answer,
   .accordion__question--active ~ .accordion__answer {
     position: static;
@@ -1353,6 +1357,9 @@ html {
     background: var(--accent-color-400) radial-gradient(circle at 35% 75%, var(--accent-color-500), transparent 60%);
     border-radius: 0 0 20px 20px;
     overflow: hidden;
+  }
+
+  .accordion__question--active ~ .accordion__answer {
     opacity: 1;
   }
 
