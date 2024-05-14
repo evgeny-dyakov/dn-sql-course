@@ -55,7 +55,8 @@
     }
 
     &::after {
-      top: 266px;
+      top: auto;
+      bottom: -20px;
       left: 0;
     }
   }
@@ -68,7 +69,6 @@
 
   .faq__container {
     &::after {
-      top: auto;
       bottom: -77px;
       left: 0;
       width: 566px;

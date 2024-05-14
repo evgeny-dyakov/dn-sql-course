@@ -8,7 +8,6 @@ class Accordion {
   }
 
   createAccordion(data) {
-    const active = 'accordion__question--active'
     const accordion = createElement('div', 'accordion')
     accordion.classList.add(`accordion--${data.length}`)
 
@@ -60,54 +59,49 @@ class Accordion {
 
       let screen = 'desktop'
 
-      window.addEventListener('DOMContentLoaded', DOMContentLoadedHandler)
-      window.addEventListener('resize', debounce(onAccordionResize))
-      accordion.addEventListener('click', onQuestionClick)
-
-      function DOMContentLoadedHandler() {
+      window.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth <= tabletWidth) {
           screen = 'mobile'
           setHeight()
         }
-      }
+      })
 
-      function onQuestionClick(event) {
+      accordion.addEventListener('click', event => {
         const question = event.target.closest('.accordion__question')
 
         if (!question) return
 
-        let current
-        let target
+        if (!question.classList.contains('accordion__question--active')) {
+          let current
+          let target
 
-        for (let i = 0; i < questions.length; i++) {
-          if (questions[i].classList.contains(active)) {
-            current = i
+          for (let i = 0; i < questions.length; i++) {
+            if (questions[i].classList.contains('accordion__question--active')) {
+              current = i
+            }
+
+            if (questions[i] === question) {
+              target = i
+            }
           }
 
-          if (questions[i] === question) {
-            target = i
-          }
-        }
+          questions[current].classList.remove('accordion__question--active')
+          questions[current].disabled = false
 
-        if (screen === 'desktop') {
-          if (!question.classList.contains(active)) {
-            questions[current].classList.remove(active)
-            questions[target].classList.add(active)
-          }
-        }
+          questions[target].classList.add('accordion__question--active')
+          questions[target].disabled = true
 
-        if (screen === 'mobile') {
-          if (question.classList.contains(active)) {
-            question.classList.remove(active)
-            answers[target].style.height = `${inners[target].offsetHeight}px`
-            setTimeout(() => answers[target].style.height = '0px')
-          } else {
-            question.classList.add(active)
+          if (window.innerWidth <= tabletWidth) {
+            answers[current].style.height = `${inners[current].offsetHeight}px`
+            setTimeout(() => answers[current].style.height = '0px')
+
             answers[target].style.height = `${inners[target].offsetHeight}px`
             setTimeout(() => answers[target].removeAttribute('style'), duration)
           }
         }
-      }
+      })
+
+      window.addEventListener('resize', debounce(onAccordionResize))
 
       function onAccordionResize() {
         if (window.innerWidth <= tabletWidth && screen === 'desktop') {
@@ -118,34 +112,17 @@ class Accordion {
         if (window.innerWidth > tabletWidth && screen === 'mobile') {
           screen = 'desktop'
           answers.forEach(answer => answer.removeAttribute('style'))
-
-          questions[0].classList = `accordion__question ${active}`
-          for (let i = 1; i < questions.length; i++) {
-            questions[i].classList = 'accordion__question'
-          }
         }
       }
 
       function setHeight () {
         for (let i = 0; i < questions.length; i++) {
-          if (questions[i].classList.contains(active)) {
+          if (questions[i].classList.contains('accordion__question--active')) {
             continue
           }
           answers[i].style.height = '0px'
         }
       }
-    }
-
-    function setActive() {
-      const firstQuestion = accordion.querySelector('.accordion__question')
-      firstQuestion.classList.add(active)
-    }
-
-    function setGradient() {
-      if (counter % 2) {
-        accordion.classList.add('accordion--right-gradient')
-      }
-      counter++
     }
 
     function createElement(tagName, className) {
@@ -154,6 +131,19 @@ class Accordion {
         element.className = className
       }
       return element
+    }
+
+    function setActive() {
+      const firstQuestion = accordion.querySelector('.accordion__question')
+      firstQuestion.classList.add('accordion__question--active')
+      firstQuestion.disabled = true
+    }
+
+    function setGradient() {
+      if (counter % 2) {
+        accordion.classList.add('accordion--right-gradient')
+      }
+      counter++
     }
 
     return accordion

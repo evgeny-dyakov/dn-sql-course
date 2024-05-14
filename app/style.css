@@ -1317,7 +1317,7 @@ html {
 @media (max-width: 1024px) {
   .accordion {
     display: block;
-    height: auto;
+    min-height: auto;
   }
 
   .accordion::after {
@@ -1559,7 +1559,8 @@ html {
   }
 
   .faq__container::after {
-    top: 266px;
+    top: auto;
+    bottom: -20px;
     left: 0;
   }
 }
@@ -1570,7 +1571,6 @@ html {
   }
 
   .faq__container::after {
-    top: auto;
     bottom: -77px;
     left: 0;
     width: 566px;
