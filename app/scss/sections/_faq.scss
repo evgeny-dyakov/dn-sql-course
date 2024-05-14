@@ -19,7 +19,7 @@
 
   &::before {
     z-index: -200;
-    bottom: -40px;
+    top: -230px;
     left: -760px;
     width: 1289px;
     height: 1042px;
@@ -50,13 +50,12 @@
 
   .faq__container {
     &::before {
-      bottom: -90px;
+      top: 150px;
       left: -700px;
     }
 
     &::after {
-      top: auto;
-      bottom: -20px;
+      top: 264px;
       left: 0;
     }
   }
@@ -69,7 +68,7 @@
 
   .faq__container {
     &::after {
-      bottom: -77px;
+      top: 450px;
       left: 0;
       width: 566px;
       height: 549px;
