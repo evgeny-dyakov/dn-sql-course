@@ -31,7 +31,7 @@
       translate: 81% 0;
       width: 1419px;
       height: 1418px;
-      background: radial-gradient(var(--accent-color-400) 0%, transparent 60%);
+      background: radial-gradient(var(--accent-color-500) 0%, transparent 60%);
     }
 }
 
@@ -39,7 +39,7 @@
   position: relative;
   z-index: 0;
 
-    &::before {
+  &::before {
     content: '';
     position: absolute;
     z-index: -100;

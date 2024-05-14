@@ -2,7 +2,7 @@
 
 .header {
   position: sticky;
-  z-index: 100;
+  z-index: 200;
   top: 0;
   left: 0;
   height: var(--header-height);
@@ -122,7 +122,7 @@
   height: 2px;
   background: var(--light-color);
   border-radius: 5px;
-  animation-duration: var(--t-duration-mobile-menu);
+  animation-duration: var(--t-duration);
   animation-timing-function: var(--t-timing-function);
   animation-fill-mode: forwards;
 }
@@ -192,7 +192,7 @@
   width: 100vw;
   height: 100dvh;
   background: var(--dark-color);
-  transition: var(--t-timing-function) var(--t-duration-mobile-menu);
+  transition: var(--t-timing-function) var(--t-duration);
   opacity: .8;
 
   &--none {
@@ -213,7 +213,7 @@
     width: 0;
     height: calc(100dvh - var(--header-height));
     background: var(--accent-color-200);
-    transition: var(--t-timing-function) var(--t-duration-mobile-menu);
+    transition: var(--t-timing-function) var(--t-duration);
     overflow: hidden;
 
     &--block {
@@ -233,7 +233,7 @@
     height: calc(100dvh - var(--header-height));
     padding: 56px 32px 31px;
     overflow-y: scroll;
-    transition: var(--t-timing-function) var(--t-duration-mobile-menu);
+    transition: var(--t-timing-function) var(--t-duration);
   }
 
   .header__navigation {

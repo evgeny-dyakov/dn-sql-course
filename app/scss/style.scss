@@ -1,12 +1,14 @@
 @import
   'fonts',
   'variables',
-  'mixins',
   'general',
   './sections/header',
   './sections/preview',
   './sections/whom',
   './sections/about',
   './sections/includes',
+  './sections/accordion',
   './sections/program',
-  './sections/tariffs';
+  './sections/tariffs',
+  './sections/faq',
+  './sections/footer';

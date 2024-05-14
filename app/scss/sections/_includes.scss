@@ -1,4 +1,8 @@
+/*** *** includes *** ***/
+
 .includes {
+  position: relative;
+  z-index: 100;
   padding: 49px 0 55px;
   font-family: var(--font-primary);
   color: var(--light-color);

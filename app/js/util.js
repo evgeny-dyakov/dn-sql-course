@@ -1,5 +1,5 @@
 const tabletWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--tablet'))
-const duration = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--t-duration-mobile-menu'))
+const duration = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--t-duration'))
 
 function debounce(func, ms = 250) {
   let timeout;
