@@ -1047,8 +1047,6 @@ html {
 
 /*** *** includes *** ***/
 .includes {
-  position: relative;
-  z-index: 100;
   padding: 49px 0 55px;
   font-family: var(--font-primary);
   color: var(--light-color);
@@ -1415,6 +1413,7 @@ html {
   font-family: var(--font-primary);
   color: var(--light-color);
   background: var(--dark-color);
+  overflow: hidden;
 }
 
 .program__container {
@@ -1489,8 +1488,6 @@ html {
 
 /*** *** tariffs *** ***/
 .tariffs {
-  position: relative;
-  z-index: 100;
   padding: 49px 0 200px;
   background: var(--accent-color-200);
 }
@@ -1513,6 +1510,7 @@ html {
   font-family: var(--font-primary);
   color: var(--light-color);
   background: var(--dark-color);
+  overflow: hidden;
 }
 
 .faq__container {
@@ -1554,7 +1552,7 @@ html {
   }
 
   .faq__container::before {
-    top: 150px;
+    top: 110px;
     left: -700px;
   }
 
@@ -1567,6 +1565,10 @@ html {
 @media (max-width: 620px) {
   .faq {
     padding: 65px 0 48px;
+  }
+
+  .faq__container::before {
+    top: -40px;
   }
 
   .faq__container::after {

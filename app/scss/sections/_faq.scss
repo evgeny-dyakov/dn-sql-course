@@ -4,7 +4,8 @@
   padding: 161px 0 200px;
   font-family: var(--font-primary);
   color: var(--light-color);
-  background: var(--dark-color)
+  background: var(--dark-color);
+  overflow: hidden;
 }
 
 .faq__container {
@@ -50,7 +51,7 @@
 
   .faq__container {
     &::before {
-      top: 150px;
+      top: 110px;
       left: -700px;
     }
 
@@ -67,6 +68,10 @@
   }
 
   .faq__container {
+    &::before {
+      top: -40px;
+    }
+
     &::after {
       top: 450px;
       left: 0;
