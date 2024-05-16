@@ -45,12 +45,18 @@ function closeMenu() {
 
 function showMenu() {
   menu.classList.toggle('header__menu--block')
-  setTimeout(() => menu.classList.toggle('header__menu--open'))
+  setTimeout(() => {
+    menu.classList.toggle('header__menu--open')
+  })
 }
 
 function hideMenu() {
+  burger.disabled = true
   menu.classList.toggle('header__menu--open')
-  setTimeout(() => menu.classList.toggle('header__menu--block'), duration)
+  setTimeout(() => {
+    menu.classList.toggle('header__menu--block')
+    burger.disabled = false
+  }, duration)
 }
 
 function showOverlay() {

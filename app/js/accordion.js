@@ -102,9 +102,13 @@ class Accordion {
             answers[target].style.height = `${inners[target].offsetHeight}px`
             setTimeout(() => answers[target].style.height = '0px')
           } else {
+            question.disabled = true
             question.classList.add(active)
             answers[target].style.height = `${inners[target].offsetHeight}px`
-            setTimeout(() => answers[target].removeAttribute('style'), duration)
+            setTimeout(() => {
+              answers[target].removeAttribute('style')
+              question.disabled = false
+            }, duration)
           }
         }
       }
