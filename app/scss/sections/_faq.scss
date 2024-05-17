@@ -1,7 +1,7 @@
 /*** *** faq *** ***/
 
 .faq {
-  padding: 161px 0 200px;
+  padding: 161px 0 100px;
   font-family: var(--font-primary);
   color: var(--light-color);
   background: var(--dark-color);
@@ -20,7 +20,7 @@
 
   &::before {
     z-index: -200;
-    top: -230px;
+    bottom: -50px;
     left: -760px;
     width: 1289px;
     height: 1042px;
@@ -30,7 +30,7 @@
 
   &::after {
     z-index: -100;
-    top: 43px;
+    bottom: -90px;
     left: -80px;
     width: 840px;
     height: 814px;
@@ -51,12 +51,12 @@
 
   .faq__container {
     &::before {
-      top: 110px;
+      bottom: -250px;
       left: -700px;
     }
 
     &::after {
-      top: 264px;
+      bottom: -93px;
       left: 0;
     }
   }
@@ -69,12 +69,11 @@
 
   .faq__container {
     &::before {
-      top: -40px;
+      bottom: -250px;
     }
 
     &::after {
-      top: 450px;
-      left: 0;
+      bottom: -64px;
       width: 566px;
       height: 549px;
     }

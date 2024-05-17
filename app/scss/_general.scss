@@ -199,6 +199,22 @@ html {
   opacity: .5;
 }
 
+.social--transparent .social__link {
+  &::before {
+    display: none;
+  }
+}
+
+@media(hover: hover) {
+  .social--transparent .social__link:hover {
+    color: var(--accent-color-200)
+  }
+}
+
+.social--transparent .social__link:active {
+  color: var(--accent-color-200)
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
