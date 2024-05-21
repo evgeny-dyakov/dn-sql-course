@@ -45,7 +45,7 @@
             <a class="header__get-study button button--small" href="https://ya.ru/?npr=1" target="_blank">Начать обучение</a>
             <div class="header__ask-question">
               <p>Остались вопросы?</p>
-              <button type="button">Напиши</button>
+              <button class="ask-button ask-button--mobile" type="button">Напиши</button>
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@
           <div class="footer__link-wrapper">
             <div class="footer__ask-question">
               <p>Остались вопросы?</p>
-              <button type="button">Напиши</button>
+              <button class="ask-button" type="button">Напиши</button>
             </div>
             <ul class="footer__social social social--transparent">
               <li>
@@ -235,6 +235,23 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-ask modal-ask--none modal-ask--transparent">
+      <h2 class="title title--h2">Остались вопросы?</h2>
+
+      <form class="modal-ask__form" action="#" method="post">
+        <button class="modal-ask__submit" type="submit">отправить</button>
+      </form>
+
+      <button class="modal-ask__close" type="button">закрыть</button>
+    </div>
+
+    <div class="modal-sent modal-sent--none modal-sent--transparent">
+      <h2 class="title title--h2">Вопрос отправлен</h2>
+      <button class="modal-sent__close" type="button">закрыть</button>
+    </div>
+
+    <div class="modal-overlay modal-overlay--none modal-overlay--transparent"></div>
 
     <script src="./js/main.js" type="module"></script>
   </body>

@@ -1,5 +1,6 @@
 import './header.js'
 import './tariffs.js'
+import './modal.js'
 
 import {Accordion} from './accordion.js'
 import {programAccordionData, faqAccordionData} from './accordion-data.js'

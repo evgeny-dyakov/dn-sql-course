@@ -6,6 +6,7 @@ const menu = header.querySelector('.header__menu')
 const nav = header.querySelector('.header__navigation')
 const burger = header.querySelector('.header__burger')
 const overlay = header.querySelector('.header__overlay')
+const askButton = header.querySelector('.ask-button')
 
 const isTablet = () => window.innerWidth <= tabletWidth
 
@@ -16,6 +17,8 @@ nav.addEventListener('click', onNavClick)
 
 window.addEventListener('click', onOverlayClick)
 window.addEventListener('resize', debounce(onHeaderResize))
+
+askButton.addEventListener('click', closeMenu)
 
 function onLogoClick() {
   if (isTablet() && menu.classList.contains('header__menu--open')) closeMenu()
