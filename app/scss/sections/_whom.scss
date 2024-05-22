@@ -3,7 +3,7 @@
 .whom {
   padding: 40px 0;
   font-family: var(--font-primary);
-  color: var(--light-color);
+  color: rgb(var(--light-color));
   background: var(--dark-color);
 }
 
@@ -38,19 +38,8 @@
   flex-direction: column;
   min-height: 240px;
   padding: 25px 24px 32px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -200;
-    width: 100%;
-    height: 100%;
-    background: var(--light-color);
-    border-radius: 20px;
-    opacity: 0.15;
-  }
+  background: rgb(var(--light-color) / 15%);
+  border-radius: 20px;
 }
 
 .whom__item-description {

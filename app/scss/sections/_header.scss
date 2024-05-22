@@ -8,7 +8,7 @@
   height: var(--header-height);
   margin: calc(var(--header-height) * -1) 0 0;
   font-family: var(--font-primary);
-  color: var(--light-color);
+  color: rgb(var(--light-color));
 
   &::before {
     content: '';
@@ -120,7 +120,7 @@
 .header__burger-c-el {
   position: absolute;
   height: 2px;
-  background: var(--light-color);
+  background: rgb(var(--light-color));
   border-radius: 5px;
   animation-duration: var(--t-duration);
   animation-timing-function: var(--t-timing-function);
@@ -251,7 +251,7 @@
     font-size: 20px;
 
     &:active {
-      color: var(--light-color);
+      color: rgb(var(--light-color));
       opacity: .5;
     }
   }

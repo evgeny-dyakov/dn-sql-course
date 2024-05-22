@@ -7,7 +7,7 @@
   gap: 20.9px;
   min-height: 701.8px;
   font-family: var(--font-primary);
-  color: var(--light-color);
+  color: rgb(var(--light-color));
 
   &--2 {
     grid-template-rows: repeat(2, 1fr);

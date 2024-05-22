@@ -8,7 +8,9 @@ $mobile: 620px;
   --mobile: 620px;
   --font-primary: "inter", sans-serif;
   --font-secondary: "play", sans-serif;
-  --light-color: #fff;
+  --light-color: 255 255 255;
+
+  // --light-color: #fff;
   --dark-color: #141414;
   --accent-color-100: #9849ad;
   --accent-color-200: #871da1;
@@ -20,5 +22,4 @@ $mobile: 620px;
   --t-timing-function: ease;
   --header-height: 72px;
   --menu-mobile-width: 289px;
-  --test-color: 255 255 255;
 }
