@@ -21,11 +21,11 @@
 
   &::before {
     z-index: -200;
-    top: -396px;
-    left: -835px;
-    width: 1578px;
-    height: 1579px;
-    background: radial-gradient(var(--accent-color-200) 0%, transparent 60%);
+    top: -146px;
+    left: -615px;
+    width: 1050px;
+    height: 1050px;
+    background: radial-gradient(var(--accent-color-200) 0%, transparent 70%);
     opacity: .7;
   }
 
@@ -52,8 +52,8 @@
 
   .program__container {
     &::before {
-      top: -166px;
-      left: -855px;
+      top: -36px;
+      left: -555px;
     }
 
     &::after {

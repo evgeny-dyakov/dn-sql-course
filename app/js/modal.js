@@ -1,4 +1,4 @@
-import {duration} from './util.js'
+import {duration, scrollBarWidth} from './util.js'
 
 const askButtons = document.querySelectorAll('.ask-button')
 const modalAsk = document.querySelector('.modal-ask')
@@ -24,6 +24,8 @@ function openModalAsk() {
 
   addModalCloseHandlers()
   modalAskForm.addEventListener('submit', openModalSent)
+
+  freezeBody()
 }
 
 function openModalSent(event) {
@@ -76,6 +78,8 @@ function closeModal(event) {
   if (modal === modalAsk) {
     modalAskForm.removeEventListener('submit', openModalSent)
   }
+
+  unfreezeBody()
 }
 
 function show(el) {
@@ -90,4 +94,16 @@ function hide(el) {
 
   el.classList.toggle(`${baseClass}--transparent`)
   setTimeout(() => el.classList.toggle(`${baseClass}--none`), duration)
+}
+
+function freezeBody() {
+  document.body.classList.add('body--no-scroll')
+  document.body.style = `padding-right: ${scrollBarWidth}px`
+}
+
+function unfreezeBody() {
+  setTimeout(() => {
+    document.body.classList.remove('body--no-scroll')
+    document.body.removeAttribute('style')
+  }, duration)
 }
