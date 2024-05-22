@@ -5,7 +5,7 @@
   font-family: var(--font-primary);
   color: rgb(var(--light-color));
   padding: 48px 0 62px;
-  background: var(--accent-color-200);
+  background: rgb(var(--accent-color-200));
   overflow: hidden;
 
   &::before {
@@ -47,7 +47,7 @@
   &--individual {
     width: 53.1%;
     padding: 66px 56px 88px;
-    background: var(--accent-color-400);
+    background: rgb(var(--accent-color-400));
   }
 }
 

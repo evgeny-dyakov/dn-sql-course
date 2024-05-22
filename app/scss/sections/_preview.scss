@@ -5,7 +5,7 @@
   padding: 200px 0 177px;
   font-family: var(--font-primary);
   color: rgb(var(--light-color));
-  background: var(--dark-color);
+  background: rgb(var(--dark-color));
   z-index: 0;
 
     &::before,
@@ -22,7 +22,7 @@
       translate: -94% 0;
       width: 1627px;
       height: 1627px;
-      background: radial-gradient(var(--accent-color-200) 0%, transparent 60%);
+      background: radial-gradient(rgb(var(--accent-color-200)) 0%, transparent 60%);
     }
 
     &::after {
@@ -31,7 +31,7 @@
       translate: 81% 0;
       width: 1419px;
       height: 1418px;
-      background: radial-gradient(var(--accent-color-500) 0%, transparent 60%);
+      background: radial-gradient(rgb(var(--accent-color-500)) 0%, transparent 60%);
     }
 }
 

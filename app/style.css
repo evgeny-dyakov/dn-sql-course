@@ -38,13 +38,13 @@
   --font-primary: "inter", sans-serif;
   --font-secondary: "play", sans-serif;
   --light-color: 255 255 255;
-  --dark-color: #141414;
-  --accent-color-100: #9849ad;
-  --accent-color-200: #871da1;
-  --accent-color-300: #6d0e84;
-  --accent-color-400: #2d1243;
-  --accent-color-500: #2b309e;
-  --accent-color-600: #2c2c91;
+  --dark-color: 20 20 20;
+  --accent-color-100: 152 73 173;
+  --accent-color-200: 135 29 161;
+  --accent-color-300: 109 14 132;
+  --accent-color-400: 45 18 67;
+  --accent-color-500: 43 48 158;
+  --accent-color-600: 44 44 145;
   --t-duration: 200ms;
   --t-timing-function: ease;
   --header-height: 72px;
@@ -59,15 +59,15 @@
 }
 
 ::-webkit-scrollbar {
-  background: var(--dark-color);
+  background: rgb(var(--dark-color));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-color-200);
+  background: rgb(var(--accent-color-200));
 }
 
 * {
-  scrollbar-color: var(--accent-color-200) var(--dark-color);
+  scrollbar-color: rgb(var(--accent-color-200)) rgb(var(--dark-color));
 }
 
 html {
@@ -78,7 +78,7 @@ html {
   min-width: 360px;
   padding: 0;
   margin: 0;
-  background: var(--dark-color);
+  background: rgb(var(--dark-color));
 }
 
 .body--no-scroll {
@@ -158,7 +158,7 @@ html {
   line-height: 16px;
   font-weight: 600;
   text-align: center;
-  color: var(--accent-color-200);
+  color: rgb(var(--accent-color-200));
   text-decoration: none;
   background: rgb(var(--light-color));
   border-radius: 8px;
@@ -172,7 +172,7 @@ html {
 
 .button--accent {
   color: rgb(var(--light-color));
-  background: var(--accent-color-200);
+  background: rgb(var(--accent-color-200));
 }
 
 .button--transparent {
@@ -184,18 +184,18 @@ html {
 @media (hover: hover) {
   .button:hover {
     color: rgb(var(--light-color));
-    background: var(--accent-color-100);
+    background: rgb(var(--accent-color-100));
   }
 
   .button--transparent:hover {
-    color: var(--accent-color-200);
+    color: rgb(var(--accent-color-200));
     background: rgb(var(--light-color));
   }
 }
 
 .button:active {
   color: rgb(var(--light-color));
-  background: var(--accent-color-300);
+  background: rgb(var(--accent-color-300));
 }
 
 .button--transparent:active {
@@ -247,12 +247,12 @@ html {
 
 @media (hover: hover) {
   .social--transparent .social__link:hover {
-    color: var(--accent-color-200);
+    color: rgb(var(--accent-color-200));
   }
 }
 
 .social--transparent .social__link:active {
-  color: var(--accent-color-200);
+  color: rgb(var(--accent-color-200));
 }
 
 .visually-hidden {
@@ -364,18 +364,7 @@ html {
   margin: calc(var(--header-height) * -1) 0 0;
   font-family: var(--font-primary);
   color: rgb(var(--light-color));
-}
-
-.header::before {
-  content: "";
-  position: absolute;
-  z-index: -100;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--dark-color);
-  opacity: 0.8;
+  background: rgb(var(--dark-color)/80%);
 }
 
 .header__container {
@@ -423,12 +412,12 @@ html {
 
 @media (hover: hover) {
   .header__navigation-link:hover {
-    color: var(--accent-color-100);
+    color: rgb(var(--accent-color-100));
   }
 }
 
 .header__navigation-link:active {
-  color: var(--accent-color-300);
+  color: rgb(var(--accent-color-300));
 }
 
 .header__social {
@@ -542,9 +531,8 @@ html {
   left: 0;
   width: 100vw;
   height: 100dvh;
-  background: var(--dark-color);
+  background: rgb(var(--dark-color)/80%);
   transition: var(--t-timing-function) var(--t-duration);
-  opacity: 0.8;
 }
 
 .header__overlay--none {
@@ -563,7 +551,7 @@ html {
     display: none;
     width: 0;
     height: calc(100dvh - var(--header-height));
-    background: var(--accent-color-200);
+    background: rgb(var(--accent-color-200));
     transition: var(--t-timing-function) var(--t-duration);
     overflow: hidden;
   }
@@ -777,7 +765,7 @@ html {
   padding: 200px 0 177px;
   font-family: var(--font-primary);
   color: rgb(var(--light-color));
-  background: var(--dark-color);
+  background: rgb(var(--dark-color));
   z-index: 0;
 }
 
@@ -794,7 +782,7 @@ html {
   translate: -94% 0;
   width: 1627px;
   height: 1627px;
-  background: radial-gradient(var(--accent-color-200) 0%, transparent 60%);
+  background: radial-gradient(rgb(var(--accent-color-200)) 0%, transparent 60%);
 }
 
 .preview::after {
@@ -803,7 +791,7 @@ html {
   translate: 81% 0;
   width: 1419px;
   height: 1418px;
-  background: radial-gradient(var(--accent-color-500) 0%, transparent 60%);
+  background: radial-gradient(rgb(var(--accent-color-500)) 0%, transparent 60%);
 }
 
 .preview__container {
@@ -937,7 +925,7 @@ html {
   padding: 40px 0;
   font-family: var(--font-primary);
   color: rgb(var(--light-color));
-  background: var(--dark-color);
+  background: rgb(var(--dark-color));
 }
 
 .whom__container {
@@ -1048,7 +1036,7 @@ html {
 /*** *** about *** ***/
 .about {
   padding: 120px 0 162px;
-  background: var(--dark-color);
+  background: rgb(var(--dark-color));
 }
 
 .about__title {
@@ -1102,7 +1090,7 @@ html {
   padding: 49px 0 55px;
   font-family: var(--font-primary);
   color: rgb(var(--light-color));
-  background: var(--accent-color-200);
+  background: rgb(var(--accent-color-200));
 }
 
 .includes__wrapper {
@@ -1256,12 +1244,12 @@ html {
   right: 0;
   width: 57.7%;
   height: 100%;
-  background: var(--accent-color-400) radial-gradient(circle at 35% 75%, var(--accent-color-500), transparent 65%);
+  background: rgb(var(--accent-color-400)) radial-gradient(circle at 35% 75%, rgb(var(--accent-color-500)), transparent 65%);
   border-radius: 20px;
 }
 
 .accordion--right-gradient::after {
-  background: var(--accent-color-400) radial-gradient(circle at 65% 75%, var(--accent-color-500), transparent 65%);
+  background: rgb(var(--accent-color-400)) radial-gradient(circle at 65% 75%, rgb(var(--accent-color-500)), transparent 65%);
 }
 
 .accordion__question {
@@ -1274,50 +1262,43 @@ html {
   font-weight: 500;
   color: inherit;
   text-align: left;
-  background: transparent;
+  background: rgb(var(--accent-color-600)/60%);
   border: none;
   border-radius: 20px;
   overflow: hidden;
+  transition: var(--t-timing-function) var(--t-duration);
   cursor: pointer;
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
 }
 
-.accordion__question::before, .accordion__question::after {
+.accordion__question::before {
   content: "";
   position: absolute;
-  opacity: 0.6;
-  transition: var(--t-timing-function) var(--t-duration);
-}
-
-.accordion__question::before {
   top: 50%;
   right: 32px;
   width: 48px;
   height: 48px;
   background: url("./img/arrow-in-circle.svg") no-repeat center/cover;
+  transition: var(--t-timing-function) var(--t-duration);
   translate: 0 -50%;
-}
-
-.accordion__question::after {
-  z-index: -100;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--accent-color-600);
+  opacity: 0.6;
 }
 
 .accordion__question--active {
+  background: rgb(var(--accent-color-600));
   cursor: auto;
 }
 
-.accordion__question--active::before, .accordion__question--active::after {
+.accordion__question--active::before {
   opacity: 1;
 }
 
 @media (hover: hover) {
-  .accordion__question:hover::before,
-  .accordion__question:hover::after {
+  .accordion__question:hover {
+    background: rgb(var(--accent-color-600));
+  }
+
+  .accordion__question:hover::before {
     opacity: 1;
   }
 }
@@ -1404,7 +1385,7 @@ html {
     position: static;
     width: 100%;
     height: auto;
-    background: var(--accent-color-400) radial-gradient(circle at 35% 75%, var(--accent-color-500), transparent 60%);
+    background: rgb(var(--accent-color-400)) radial-gradient(circle at 35% 75%, rgb(var(--accent-color-500)), transparent 60%);
     border-radius: 0 0 20px 20px;
     overflow: hidden;
   }
@@ -1414,7 +1395,7 @@ html {
   }
 
   .accordion--right-gradient .accordion__answer {
-    background: var(--accent-color-400) radial-gradient(circle at 65% 75%, var(--accent-color-500), transparent 60%);
+    background: rgb(var(--accent-color-400)) radial-gradient(circle at 65% 75%, rgb(var(--accent-color-500)), transparent 60%);
   }
 
   .accordion__answer-inner {
@@ -1464,7 +1445,7 @@ html {
   padding: 161px 0 159px;
   font-family: var(--font-primary);
   color: rgb(var(--light-color));
-  background: var(--dark-color);
+  background: rgb(var(--dark-color));
   overflow: hidden;
 }
 
@@ -1484,7 +1465,7 @@ html {
   left: -615px;
   width: 1050px;
   height: 1050px;
-  background: radial-gradient(var(--accent-color-200) 0%, transparent 70%);
+  background: radial-gradient(rgb(var(--accent-color-200)) 0%, transparent 70%);
   opacity: 0.7;
 }
 
@@ -1544,7 +1525,7 @@ html {
   font-family: var(--font-primary);
   color: rgb(var(--light-color));
   padding: 48px 0 62px;
-  background: var(--accent-color-200);
+  background: rgb(var(--accent-color-200));
   overflow: hidden;
 }
 
@@ -1587,7 +1568,7 @@ html {
 .tariffs__tariff--individual {
   width: 53.1%;
   padding: 66px 56px 88px;
-  background: var(--accent-color-400);
+  background: rgb(var(--accent-color-400));
 }
 
 .tariffs__title--h3 {
@@ -1759,7 +1740,7 @@ html {
   padding: 161px 0 100px;
   font-family: var(--font-primary);
   color: rgb(var(--light-color));
-  background: var(--dark-color);
+  background: rgb(var(--dark-color));
   overflow: hidden;
 }
 
@@ -1779,7 +1760,7 @@ html {
   left: -760px;
   width: 1289px;
   height: 1042px;
-  background: radial-gradient(var(--accent-color-500) 0%, transparent 60%);
+  background: radial-gradient(rgb(var(--accent-color-500)) 0%, transparent 60%);
   opacity: 0.7;
 }
 
@@ -1833,7 +1814,7 @@ html {
   padding: 44px 0 31px;
   font-family: var(--font-primary);
   color: rgb(var(--light-color));
-  background: var(--dark-color);
+  background: rgb(var(--dark-color));
 }
 
 .footer__top-wrapper {
@@ -1893,13 +1874,13 @@ html {
 
 @media (hover: hover) {
   .footer__ask-question button:hover {
-    color: var(--accent-color-200);
+    color: rgb(var(--accent-color-200));
     cursor: pointer;
   }
 }
 
 .footer__ask-question button:active {
-  color: var(--accent-color-200);
+  color: rgb(var(--accent-color-200));
 }
 
 .footer__social {
@@ -1979,6 +1960,7 @@ html {
   }
 }
 
+/*** *** modal *** ***/
 .modal-ask {
   position: fixed;
   z-index: 400;
@@ -1988,7 +1970,7 @@ html {
   width: 618px;
   min-height: 659px;
   padding: 48px 48px 64px;
-  background: var(--accent-color-200);
+  background: rgb(var(--accent-color-200));
   border-radius: 20px;
   opacity: 1;
   translate: -50% -50%;
@@ -2028,7 +2010,7 @@ html {
   width: 618px;
   min-height: 187px;
   padding: 48px 48px 64px;
-  background: var(--accent-color-200);
+  background: rgb(var(--accent-color-200));
   border-radius: 20px;
   opacity: 1;
   translate: -50% -50%;
@@ -2091,8 +2073,7 @@ html {
   display: block;
   width: 100%;
   height: 100%;
-  background: var(--dark-color);
-  opacity: 0.8;
+  background: rgb(var(--dark-color)/80%);
   transition: var(--t-timing-function) var(--t-duration);
 }
 

@@ -4,7 +4,7 @@
   padding: 44px 0 31px;
   font-family: var(--font-primary);
   color: rgb(var(--light-color));
-  background: var(--dark-color);
+  background: rgb(var(--dark-color));
 }
 
 .footer__top-wrapper {
@@ -64,13 +64,13 @@
 
 @media(hover: hover) {
   .footer__ask-question button:hover {
-    color: var(--accent-color-200);
+    color: rgb(var(--accent-color-200));
     cursor: pointer;
   }
 }
 
 .footer__ask-question button:active {
-  color: var(--accent-color-200);
+  color: rgb(var(--accent-color-200));
 }
 
 .footer__social {

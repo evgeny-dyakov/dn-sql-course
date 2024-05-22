@@ -4,7 +4,7 @@
   padding: 161px 0 100px;
   font-family: var(--font-primary);
   color: rgb(var(--light-color));
-  background: var(--dark-color);
+  background: rgb(var(--dark-color));
   overflow: hidden;
 }
 
@@ -24,7 +24,7 @@
     left: -760px;
     width: 1289px;
     height: 1042px;
-    background: radial-gradient(var(--accent-color-500) 0%, transparent 60%);
+    background: radial-gradient(rgb(var(--accent-color-500)) 0%, transparent 60%);
     opacity: .7;
   }
 
