@@ -49,6 +49,7 @@
   --t-timing-function: ease;
   --header-height: 72px;
   --menu-mobile-width: 289px;
+  --test-color: 255 255 255;
 }
 
 /*** *** general *** ***/
@@ -276,6 +277,50 @@ html {
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form-field {
+  width: 100%;
+  margin: 0 0 23px;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--light-color);
+}
+
+.form-field lable {
+  display: block;
+  width: 100%;
+  margin: 0 0 8px;
+}
+
+.form-field input,
+.form-field textarea {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 8px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--light-color);
+  border-radius: 8px;
+  border: 2px solid var(--light-color);
+  background: transparent;
+  outline: none;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgb(var(--test-color)/30%);
+}
+
+.form-field textarea {
+  height: 98px;
+  padding: 8px;
+  font-family: var(--font-primary);
+  resize: none;
   overflow: hidden;
 }
 
@@ -1992,6 +2037,14 @@ html {
   opacity: 0;
 }
 
+.modal-ask__title {
+  margin: 0 0 16px;
+}
+
+.modal-ask__text {
+  margin: 0 0 24px;
+}
+
 .modal-ask__form {
   display: flex;
   flex-direction: column;
@@ -2024,13 +2077,44 @@ html {
   opacity: 0;
 }
 
-.modal-sent__close {
+.modal-close {
   position: absolute;
-  top: 48px;
+  top: 40px;
   right: 48px;
-  padding: 10px 13px;
-  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: rgb(var(--test-color)/15%);
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  transition: var(--t-timing-function) var(--t-duration);
+}
+
+.modal-close::before, .modal-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 2px;
+  background: var(--light-color);
+  border-radius: 5px;
+  translate: -50% -50%;
+}
+
+.modal-close::before {
+  rotate: 45deg;
+}
+
+.modal-close::after {
+  rotate: -45deg;
+}
+
+@media (hover: hover) {
+  .modal-close:hover {
+    background: rgb(255 255 255 / 20%);
+  }
 }
 
 .modal-overlay {
@@ -2056,15 +2140,6 @@ html {
 
 .modal-ask__submit {
   margin: auto 0 0;
-  padding: 10px 13px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.modal-ask__close {
-  position: absolute;
-  top: 48px;
-  right: 48px;
   padding: 10px 13px;
   font-weight: 700;
   cursor: pointer;

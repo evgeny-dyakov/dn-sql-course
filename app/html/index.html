@@ -8,21 +8,26 @@
   </head>
   <body class="body">
 
-    @@include('./sections/header.html')
+    <div class="content">
 
-    <main class="main" id="main">
+      @@include('./sections/header.html')
 
-      @@include('./sections/preview.html')
-      @@include('./sections/whom.html')
-      @@include('./sections/about.html')
-      @@include('./sections/includes.html')
-      @@include('./sections/program.html')
-      @@include('./sections/tariffs.html')
-      @@include('./sections/faq.html')
+      <main class="main" id="main">
 
-    </main>
+        @@include('./sections/preview.html')
+        @@include('./sections/whom.html')
+        @@include('./sections/about.html')
+        @@include('./sections/includes.html')
+        @@include('./sections/program.html')
+        @@include('./sections/tariffs.html')
+        @@include('./sections/faq.html')
 
-    @@include('./sections/footer.html')
+      </main>
+
+      @@include('./sections/footer.html')
+
+    </div>
+
     @@include('./sections/modal.html')
 
     <script src="./js/main.js" type="module"></script>

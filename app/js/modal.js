@@ -5,6 +5,7 @@ const modalAsk = document.querySelector('.modal-ask')
 const modalAskForm = modalAsk.querySelector('.modal-ask__form')
 const modalSent = document.querySelector('.modal-sent')
 const overlay = document.querySelector('.modal-overlay')
+const content = document.querySelector('.content')
 
 window.addEventListener('DOMContentLoaded', addAskButtonsHandlers)
 
@@ -26,6 +27,7 @@ function openModalAsk() {
   modalAskForm.addEventListener('submit', openModalSent)
 
   freezeBody()
+  content.setAttribute('inert', '')
 }
 
 function openModalSent(event) {
@@ -80,6 +82,7 @@ function closeModal(event) {
   }
 
   unfreezeBody()
+  content.removeAttribute('inert')
 }
 
 function show(el) {

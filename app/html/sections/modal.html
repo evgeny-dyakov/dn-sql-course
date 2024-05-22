@@ -1,16 +1,33 @@
 <div class="modal-ask modal-ask--none modal-ask--transparent">
-  <h2 class="title title--h2">Остались вопросы?</h2>
+  <h2 class="modal-ask__title title title--h2">Остались вопросы?</h2>
+  <p class="modal-ask__text main-text">Напиши нам, мы свяжемся с тобой и ответим на любые вопросы по поводу курса, оплаты, сроков и программы обучения</p>
 
   <form class="modal-ask__form" action="#" method="post">
+    <p class="form-field">
+      <lable for="name">Имя</lable>
+      <input type="text" name="name" id="name" autocomplete="off" maxlength="50" required autofocus>
+    </p>
+    <p class="form-field">
+      <lable for="telegram">Ник в Telegram</lable>
+      <input type="text" name="telegram" id="telegram" autocomplete="off" maxlength="50" placeholder="@nickname" required>
+    </p>
+    <p class="form-field">
+      <lable for="question">Вопрос</lable>
+      <textarea name="question" id="question" maxlength="250" required></textarea>
+    </p>
     <button class="modal-ask__submit" type="submit">отправить</button>
   </form>
 
-  <button class="modal-ask__close" type="button">закрыть</button>
+  <button class="modal-ask__close modal-close" type="button">
+    <div class="visually-hidden">закрыть</div>
+  </button>
 </div>
 
 <div class="modal-sent modal-sent--none modal-sent--transparent">
-  <h2 class="title title--h2">Вопрос отправлен</h2>
-  <button class="modal-sent__close" type="button">закрыть</button>
+  <h2 class="title title--h2">Вопрос отправлен!</h2>
+  <button class="modal-sent__close modal-close" type="button">
+    <div class="visually-hidden">закрыть</div>
+  </button>
 </div>
 
 <div class="modal-overlay modal-overlay--none modal-overlay--transparent"></div>
