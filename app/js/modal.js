@@ -36,7 +36,7 @@ function openModalAsk(event) {
   }, timeout)
 
   if (document.documentElement.clientWidth <= mobileWidth) {
-    modalAsk.style.top = '0px'
+    setTimeout(() => modalAsk.style.top = '0px', duration)
   }
 }
 
