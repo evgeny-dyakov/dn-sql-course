@@ -1,3 +1,4 @@
+const mobileWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--mobile'))
 const tabletWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--tablet'))
 const duration = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--t-duration'))
 
@@ -23,4 +24,4 @@ function getScrollBarWidth() {
 }
 
 
-export {tabletWidth, duration, debounce, scrollBarWidth}
+export {mobileWidth, tabletWidth, duration, debounce, scrollBarWidth}
