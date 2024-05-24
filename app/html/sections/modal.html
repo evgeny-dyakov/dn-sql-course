@@ -3,31 +3,40 @@
   <p class="modal-ask__text main-text">Напиши нам, мы свяжемся с тобой и ответим на любые вопросы по поводу курса, оплаты, сроков и программы обучения</p>
 
   <form class="modal-ask__form" action="#" method="post">
-    <p class="form-field">
-      <lable for="name">Имя</lable>
-      <input type="text" name="name" id="name" autocomplete="off" maxlength="50" required autofocus>
+    <p class="modal-ask__form-field form-field">
+      <label for="name">Имя</label>
+      <input type="text" name="name" id="name" autocomplete="off" maxlength="50" required>
     </p>
-    <p class="form-field">
-      <lable for="telegram">Ник в Telegram</lable>
+    <p class="modal-ask__form-field form-field">
+      <label for="telegram">Ник в Telegram</label>
       <input type="text" name="telegram" id="telegram" autocomplete="off" maxlength="50" placeholder="@nickname" required>
     </p>
-    <p class="form-field">
-      <lable for="question">Вопрос</lable>
+    <p class="modal-ask__form-field form-field">
+      <label for="question">Вопрос</label>
       <textarea name="question" id="question" maxlength="250" required></textarea>
     </p>
-    <button class="modal-ask__submit" type="submit">отправить</button>
+    <p class="modal-ask__form-checkbox form-checkbox">
+      <label>
+        <input class="visually-hidden" type="checkbox" name="agree" value="true" required>
+        <span class="form-checkbox__fakebox"></span>
+        <span>Даю согласие <a href="https://ya.ru/" target="_blank">на обработку персональных данных</a></span>
+      </label>
+    </p>
+    <button class="modal-ask__submit button" type="submit">Отправить вопрос</button>
   </form>
 
   <button class="modal-ask__close modal-close" type="button">
-    <div class="visually-hidden">закрыть</div>
+    <span class="visually-hidden">закрыть</span>
   </button>
 </div>
 
 <div class="modal-sent modal-sent--none modal-sent--transparent">
-  <h2 class="title title--h2">Вопрос отправлен!</h2>
+  <h2 class="modal-sent__title title title--h2">Вопрос отправлен!</h2>
+  <p class="modal-sent__message">И мы скоро на него ответим )</p>
   <button class="modal-sent__close modal-close" type="button">
-    <div class="visually-hidden">закрыть</div>
+    <span class="visually-hidden">закрыть</span>
   </button>
+  <button class="modal-sent__close modal-sent__close--mobile button button--transparent">Закрыть</button>
 </div>
 
 <div class="modal-overlay modal-overlay--none modal-overlay--transparent"></div>

@@ -109,8 +109,10 @@ html {
   color: rgb(var(--accent-color-200));
   text-decoration: none;
   background: rgb(var(--light-color));
+  border: none;
   border-radius: 8px;
   transition: var(--t-timing-function) var(--t-duration);
+  cursor: pointer;
   -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
 
   &--small {
@@ -216,17 +218,56 @@ html {
   overflow: hidden;
 }
 
+.modal-close {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: rgb(var(--light-color) / 15%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--t-timing-function) var(--t-duration);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 2px;
+    background: rgb(var(--light-color));
+    border-radius: 5px;
+    translate: -50% -50%;
+  }
+
+  &::before {
+    rotate: 45deg;
+  }
+
+  &::after {
+    rotate: -45deg;
+  }
+}
+
+@media(hover: hover) {
+  .modal-close:hover {
+    background: rgb(255 255 255 / 20%);
+  }
+}
+
 .form-field {
-  width: 100%;
-  margin: 0 0 23px;
+  width: 350px;
+  margin: 0;
   font-family: var(--font-primary);
   font-size: 14px;
   font-weight: 400;
   color: rgb(var(--light-color));
 
-  lable {
+  label {
     display: block;
-    width: 100%;
     margin: 0 0 8px;
   }
 
@@ -250,17 +291,69 @@ html {
     }
   }
 
-  input {
-    // vertical-align: center;
-  }
-
   textarea {
     height: 98px;
     padding: 8px;
-    font-family: var(--font-primary);
     resize: none;
     overflow: hidden;
   }
+}
+
+.form-checkbox {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(var(--light-color));
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  a {
+    color: rgb(var(--light-color));
+    text-underline-offset: 4px;
+  }
+}
+
+.form-checkbox__fakebox {
+  position: relative;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(var(--light-color));
+  border-radius: 4px;
+  transition: var(--t-timing-function) var(--t-duration);
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background: rgb(var(--accent-color-200));
+    border-radius: 5px;
+  }
+
+  &::before {
+    top: 43%;
+    left: 28%;
+    width: 12px;
+    rotate: -45deg;
+  }
+
+  &::after {
+    top: 48%;
+    left: 7%;
+    width: 8px;
+    rotate: 45deg;
+  }
+}
+
+.form-checkbox input:checked + span {
+  background: rgb(var(--light-color));
 }
 
 @media(max-width: $tablet) {

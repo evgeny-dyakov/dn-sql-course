@@ -2,10 +2,11 @@ import {duration, scrollBarWidth} from './util.js'
 
 const askButtons = document.querySelectorAll('.ask-button')
 const modalAsk = document.querySelector('.modal-ask')
-const modalAskForm = modalAsk.querySelector('.modal-ask__form')
+const form = modalAsk.querySelector('.modal-ask__form')
 const modalSent = document.querySelector('.modal-sent')
 const overlay = document.querySelector('.modal-overlay')
 const content = document.querySelector('.content')
+const nameField = document.getElementById('name')
 
 window.addEventListener('DOMContentLoaded', addAskButtonsHandlers)
 
@@ -24,8 +25,9 @@ function openModalAsk() {
   removeAskButtonsHandlers()
 
   addModalCloseHandlers()
-  modalAskForm.addEventListener('submit', openModalSent)
+  form.addEventListener('submit', openModalSent)
 
+  nameField.focus()
   freezeBody()
   content.setAttribute('inert', '')
 }
@@ -34,7 +36,8 @@ function openModalSent(event) {
   event.preventDefault()
 
   hide(modalAsk)
-  modalAskForm.removeEventListener('submit', openModalSent)
+  form.removeEventListener('submit', openModalSent)
+  setTimeout(() => form.reset(), duration)
 
   show(modalSent)
 }
@@ -78,7 +81,7 @@ function closeModal(event) {
   removeModalCloseHandlers()
 
   if (modal === modalAsk) {
-    modalAskForm.removeEventListener('submit', openModalSent)
+    form.removeEventListener('submit', openModalSent)
   }
 
   unfreezeBody()
