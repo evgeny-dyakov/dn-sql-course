@@ -2178,7 +2178,7 @@ html {
   .modal-ask,
   .modal-sent {
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     padding: 33px 21px;
     border-radius: 0;
   }
@@ -2203,5 +2203,9 @@ html {
 
   .modal-sent__title {
     margin: 0 0 32px;
+  }
+
+  .modal-overlay {
+    background: rgb(var(--accent-color-200));
   }
 }

@@ -18,18 +18,22 @@ function removeAskButtonsHandlers() {
   askButtons.forEach(el => el.removeEventListener('click', openModalAsk))
 }
 
-function openModalAsk() {
-  show(modalAsk)
-  show(overlay)
+function openModalAsk(event) {
+  let timeout = event.target.closest('header') ? duration : 0
 
-  removeAskButtonsHandlers()
+  setTimeout(() => {
+    show(modalAsk)
+    show(overlay)
 
-  addModalCloseHandlers()
-  form.addEventListener('submit', openModalSent)
+    removeAskButtonsHandlers()
 
-  nameField.focus()
-  freezeBody()
-  content.setAttribute('inert', '')
+    addModalCloseHandlers()
+    form.addEventListener('submit', openModalSent)
+
+    nameField.focus()
+    freezeBody()
+    content.setAttribute('inert', '')
+  }, timeout)
 }
 
 function openModalSent(event) {
