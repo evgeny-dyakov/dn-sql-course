@@ -1,4 +1,4 @@
-import {mobileWidth, duration, scrollBarWidth} from './util.js'
+import {duration, scrollBarWidth} from './util.js'
 
 const askButtons = document.querySelectorAll('.ask-button')
 const modalAsk = document.querySelector('.modal-ask')
@@ -34,17 +34,12 @@ function openModalAsk(event) {
     freezeBody()
     content.setAttribute('inert', '')
   }, timeout)
-
-  if (document.documentElement.clientWidth <= mobileWidth) {
-    setTimeout(() => modalAsk.style.top = '0px', duration)
-  }
 }
 
 function openModalSent(event) {
   event.preventDefault()
 
   hide(modalAsk)
-  modalAsk.removeAttribute('style')
   form.removeEventListener('submit', openModalSent)
   setTimeout(() => form.reset(), duration)
 
@@ -91,7 +86,6 @@ function closeModal(event) {
 
   if (modal === modalAsk) {
     form.removeEventListener('submit', openModalSent)
-    modalAsk.removeAttribute('style')
   }
 
   unfreezeBody()
