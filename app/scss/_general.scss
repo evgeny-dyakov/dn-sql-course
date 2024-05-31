@@ -259,6 +259,7 @@ html {
 }
 
 .form-field {
+  position: relative;
   width: 350px;
   margin: 0;
   font-family: var(--font-primary);
@@ -300,6 +301,7 @@ html {
 }
 
 .form-checkbox {
+  position: relative;
   margin: 0;
   font-family: var(--font-primary);
   font-size: 14px;
@@ -356,6 +358,14 @@ html {
   background: rgb(var(--light-color));
 }
 
+.text-help {
+  position: absolute;
+  left: 5px;
+  bottom: -18px;
+  font-size: 12px;
+  color: rgb(var(--light-color) / 50%);
+}
+
 @media(max-width: $tablet) {
   .container {
     padding: 0 30px;
@@ -404,6 +414,10 @@ html {
   .form-checkbox {
     label {
       gap: 12px;
+    }
+
+    .text-help {
+      bottom: -22px;
     }
   }
 }

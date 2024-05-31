@@ -251,21 +251,21 @@
       <p class="modal-ask__text main-text">Напиши нам, мы свяжемся с тобой и ответим на любые вопросы по поводу курса, оплаты, сроков и программы обучения</p>
 
       <form class="modal-ask__form" action="#" method="post">
-        <p class="modal-ask__form-field form-field">
+        <p class="modal-ask__form-field form-field form-validation">
           <label for="name">Имя</label>
-          <input type="text" name="name" id="name" autocomplete="off" maxlength="50" required />
+          <input type="text" name="name" id="name" autocomplete="off" maxlength="50" required data-pristine-required-message="введите имя" />
         </p>
-        <p class="modal-ask__form-field form-field">
+        <p class="modal-ask__form-field form-field form-validation">
           <label for="telegram">Ник в Telegram</label>
-          <input type="text" name="telegram" id="telegram" autocomplete="off" maxlength="50" placeholder="@nickname" required />
+          <input type="text" name="telegram" id="telegram" autocomplete="off" maxlength="50" placeholder="@nickname" required data-pristine-required-message="введите ник в telegram" />
         </p>
-        <p class="modal-ask__form-field form-field">
+        <p class="modal-ask__form-field form-field form-validation">
           <label for="question">Вопрос</label>
-          <textarea name="question" id="question" maxlength="250" required></textarea>
+          <textarea name="question" id="question" maxlength="250" required required data-pristine-required-message="задайте вопрос"></textarea>
         </p>
-        <p class="modal-ask__form-checkbox form-checkbox">
+        <p class="modal-ask__form-checkbox form-checkbox form-validation">
           <label>
-            <input class="visually-hidden" type="checkbox" name="agree" value="true" required />
+            <input class="visually-hidden" type="checkbox" name="agree" value="true" required data-pristine-required-message="необходимо ваше согласие" />
             <span class="form-checkbox__fakebox"></span>
             <span>Даю согласие <a href="https://ya.ru/" target="_blank">на обработку персональных данных</a></span>
           </label>
@@ -289,6 +289,12 @@
 
     <div class="modal-overlay modal-overlay--none modal-overlay--transparent"></div>
 
+    <div class="modal-overlay__loader modal-overlay__loader--none modal-overlay__loader--transparent">
+      <div></div>
+      <div></div>
+    </div>
+
+    <script src="./js/pristine.min.js" type="module"></script>
     <script src="./js/main.js" type="module"></script>
   </body>
 </html>

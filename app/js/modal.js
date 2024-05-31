@@ -5,6 +5,7 @@ const modalAsk = document.querySelector('.modal-ask')
 const form = modalAsk.querySelector('.modal-ask__form')
 const modalSent = document.querySelector('.modal-sent')
 const overlay = document.querySelector('.modal-overlay')
+const loader = document.querySelector('.modal-overlay__loader')
 const content = document.querySelector('.content')
 const nameField = document.getElementById('name')
 
@@ -28,7 +29,7 @@ function openModalAsk(event) {
     removeAskButtonsHandlers()
 
     addModalCloseHandlers()
-    form.addEventListener('submit', openModalSent)
+    form.addEventListener('submit', validateForm)
 
     nameField.focus()
     freezeBody()
@@ -36,11 +37,8 @@ function openModalAsk(event) {
   }, timeout)
 }
 
-function openModalSent(event) {
-  event.preventDefault()
-
-  hide(modalAsk)
-  form.removeEventListener('submit', openModalSent)
+function openModalSent() {
+  form.removeEventListener('submit', validateForm)
   setTimeout(() => form.reset(), duration)
 
   show(modalSent)
@@ -85,7 +83,7 @@ function closeModal(event) {
   removeModalCloseHandlers()
 
   if (modal === modalAsk) {
-    form.removeEventListener('submit', openModalSent)
+    form.removeEventListener('submit', validateForm)
   }
 
   unfreezeBody()
@@ -116,4 +114,41 @@ function unfreezeBody() {
     document.body.classList.remove('body--no-scroll')
     document.body.removeAttribute('style')
   }, duration)
+}
+
+// validation
+
+const pristineConfig = {
+  classTo: 'form-validation',
+  errorClass: 'has-danger',
+  successClass: 'has-success',
+  errorTextParent: 'form-validation',
+  errorTextTag: 'div',
+  errorTextClass: 'text-help'
+}
+
+const pristine = new Pristine(form, pristineConfig, false)
+const telegramNickField = document.getElementById('telegram')
+
+pristine.addValidator(telegramNickField, (value) => {
+  const regex = /^@[a-zA-Z0-9_]{5,}$/
+  return regex.test(value);
+}, 'с @ не менее 5: a-z, 0-9 и _')
+
+console.log(telegramNickField)
+
+function validateForm(evt) {
+  evt.preventDefault()
+
+  const valid = pristine.validate()
+
+  if (valid) {
+    hide(modalAsk)
+    show(loader)
+
+    setTimeout(() => {
+      hide(loader)
+      openModalSent()
+    }, 1500)
+  }
 }
