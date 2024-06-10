@@ -1,0 +1,25 @@
+$tablet: 1024px;
+$mobile: 620px;
+
+:root {
+  --tablet: 1024px;
+  --mobile: 620px;
+  --container-padding-desktop: 20px;
+  --container-padding-tablet: 30px;
+  --container-padding-mobile: 20px;
+  --font-primary: "inter", sans-serif;
+  --font-secondary: "play", sans-serif;
+  --light-color: 255 255 255;
+  --dark-color: 20 20 20;
+  --gray-color: 214 214 214;
+  --accent-color-100: 152 73 173;
+  --accent-color-200: 135 29 161;
+  --accent-color-300: 109 14 132;
+  --accent-color-400: 45 18 67;
+  --accent-color-500: 43 48 158;
+  --accent-color-600: 44 44 145;
+  --t-duration: 200ms;
+  --t-timing-function: ease;
+  --header-height: 72px;
+  --menu-mobile-width: 289px;
+}

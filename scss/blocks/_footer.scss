@@ -1,0 +1,150 @@
+.footer {
+  padding: 44px 0 31px;
+  font-family: var(--font-primary);
+  color: rgb(var(--light-color));
+  background: rgb(var(--dark-color));
+}
+
+.footer__top-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 0 120px;
+}
+
+.footer__title {
+  width: 400px;
+  margin: 0 auto 0 0;
+}
+
+.footer__button-wrapper {
+  display: flex;
+  gap: 18px;
+}
+
+.footer__bottom-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo {
+  margin: 0 132px 0 0;
+  cursor: auto;
+}
+
+.footer__link-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.footer__ask-question {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 20px;
+  font-weight: 700;
+
+  p {
+    margin: 0;
+  }
+
+  button {
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    transition: var(--t-timing-function) var(--t-duration);
+  }
+}
+
+@media(hover: hover) {
+  .footer__ask-question button:hover {
+    color: rgb(var(--accent-color-200));
+    cursor: pointer;
+  }
+}
+
+.footer__ask-question button:active {
+  color: rgb(var(--accent-color-200));
+}
+
+.footer__social {
+  margin: 0 -6px 0 0;
+}
+
+@media(max-width: $tablet) {
+  .footer__top-wrapper {
+    flex-direction: column;
+    margin: 0 0 81px;
+  }
+
+  .footer__title {
+    width: auto;
+    margin: 0 0 40px;
+  }
+
+  .footer__button-wrapper {
+    width: 100%;
+
+    .button {
+      width: 50%;
+      padding: 16px 20px;
+    }
+  }
+
+  .footer__logo {
+    margin: 0 62px 0 0;
+  }
+
+  .footer__ask-question {
+    font-size: 16px;
+  }
+}
+
+@media(max-width: $mobile) {
+  .footer {
+    padding: 48px 0 25px;
+  }
+
+  .footer__title {
+    margin: 0 0 31px;
+  }
+
+  .footer__top-wrapper {
+    margin: 0 0 57px;
+  }
+
+  .footer__button-wrapper {
+    flex-direction: column;
+    gap: 15px;
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  .footer__bottom-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__logo {
+    margin: 0 0 20px;
+  }
+
+  .footer__link-wrapper {
+    width: 100%;
+  }
+
+  .footer__ask-question {
+    font-size: 14px;
+  }
+
+  .footer__social {
+    gap: 8px;
+  }
+}
+
