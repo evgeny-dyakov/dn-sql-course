@@ -3,35 +3,35 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/play-regular.woff2") format("woff2");
+  src: url("../fonts/play-regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "play";
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/play-bold.woff2") format("woff2");
+  src: url("../fonts/play-bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "inter";
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/inter-semibold.woff2") format("woff2");
+  src: url("../fonts/inter-semibold.woff2") format("woff2");
 }
 @font-face {
   font-family: "inter";
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/inter-medium.woff2") format("woff2");
+  src: url("../fonts/inter-medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "inter";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/inter-regular.woff2") format("woff2");
+  src: url("../fonts/inter-regular.woff2") format("woff2");
 }
 :root {
   --tablet: 1024px;
@@ -967,7 +967,7 @@ html {
   left: -81px;
   width: 840px;
   height: 814px;
-  background: url("/img/grid.svg") no-repeat 0 0/cover;
+  background: url("../img/grid.svg") no-repeat 0 0/cover;
 }
 
 .preview__title {
@@ -1411,7 +1411,7 @@ html {
   right: 32px;
   width: 48px;
   height: 48px;
-  background: url("/img/arrow-in-circle.svg") no-repeat center/cover;
+  background: url("../img/arrow-in-circle.svg") no-repeat center/cover;
   transition: var(--t-timing-function) var(--t-duration);
   translate: 0 -50%;
   opacity: 0.6;
@@ -1579,7 +1579,7 @@ html {
   right: -400px;
   width: 840px;
   height: 814px;
-  background: url("/img/grid.svg") no-repeat 0 0/cover;
+  background: url("../img/grid.svg") no-repeat 0 0/cover;
 }
 
 .program__title--h2 {
@@ -1631,7 +1631,7 @@ html {
   left: 9px;
   width: 840px;
   height: 815px;
-  background: url("/img/grid.svg") no-repeat center/cover;
+  background: url("../img/grid.svg") no-repeat center/cover;
 }
 
 .tariffs__title--h2 {
@@ -1709,15 +1709,15 @@ html {
 }
 
 .tariffs__tariff--group .tariffs__advantages-item::before {
-  background-image: url("/img/check-group.svg");
+  background-image: url("../img/check-group.svg");
 }
 
 .tariffs__tariff--individual .tariffs__advantages-item::before {
-  background-image: url("/img/check-individual.svg");
+  background-image: url("../img/check-individual.svg");
 }
 
 .tariffs__advantages-item--extra::before {
-  background-image: url("/img/check-individual-white.svg") !important;
+  background-image: url("../img/check-individual-white.svg") !important;
 }
 
 .tariffs__button {
@@ -1835,7 +1835,7 @@ html {
   left: -80px;
   width: 840px;
   height: 814px;
-  background: url("/img/grid.svg") no-repeat 0 0/cover;
+  background: url("../img/grid.svg") no-repeat 0 0/cover;
 }
 
 .faq__title--h2 {

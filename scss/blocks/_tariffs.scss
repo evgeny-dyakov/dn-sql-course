@@ -13,7 +13,7 @@
     left: 9px;
     width: 840px;
     height: 815px;
-    background: url('/img/grid.svg') no-repeat center / cover;
+    background: url('../img/grid.svg') no-repeat center / cover;
   }
 }
 
@@ -97,15 +97,15 @@
 }
 
 .tariffs__tariff--group .tariffs__advantages-item::before {
-  background-image: url('/img/check-group.svg');
+  background-image: url('../img/check-group.svg');
 }
 
 .tariffs__tariff--individual .tariffs__advantages-item::before {
-  background-image: url('/img/check-individual.svg');
+  background-image: url('../img/check-individual.svg');
 }
 
 .tariffs__advantages-item--extra::before {
-  background-image: url('/img/check-individual-white.svg') !important;
+  background-image: url('../img/check-individual-white.svg') !important;
 }
 
 .tariffs__button {
