@@ -1,0 +1,25 @@
+.form-area {
+  width: 400px;
+  padding: 30px 40px 30px;
+  margin: 87px auto 0;
+  background: rgb(var(--gray-color-100));
+  border-radius: 20px;
+}
+
+.form-area__title {
+  margin: 0 0 38px;
+  font-family: var(--font-secondary);
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(var(--gray-color-400));
+  text-align: center;
+}
+
+.form-area__form-field:not(:last-of-type) {
+  margin: 0 0 25px;
+}
+
+.form-area__button {
+  width: 100%;
+  margin: 22px 0 0;
+}

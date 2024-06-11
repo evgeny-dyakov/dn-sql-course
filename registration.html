@@ -11,7 +11,7 @@
       <div class="header-light__container container">
         <a class="header-light__back-btn back-btn" href="index.html">
           <span class="back-btn__arrow">
-            <img src="/img/arrow-in-circle.svg">
+            <img src="/img/arrow-in-circle.svg" alt="back arrow">
           </span>
           <span class="back-btn__text">
             Назад на сайт
@@ -23,5 +23,29 @@
         </a>
       </div>
     </header>
+
+    <main>
+
+      <section class="form-area">
+        <h1 class="form-area__title">Регистрация</h1>
+
+        <form action="#" method="post">
+          <p class="form-area__form-field form-field form-field--dark form-validation">
+            <label for="name">Почта</label>
+            <input type="text" name="name" id="name" autocomplete="off" required data-pristine-required-message="введите имя" />
+          </p>
+          <p class="form-area__form-field form-field form-field--dark form-validation">
+            <label for="name">Пароль</label>
+            <input type="text" name="name" id="name" autocomplete="off" required data-pristine-required-message="введите имя" />
+          </p>
+          <p class="form-area__form-field form-field form-field--dark form-validation">
+            <label for="name">Повторите пароль</label>
+            <input type="text" name="name" id="name" autocomplete="off" required data-pristine-required-message="введите имя" />
+          </p>
+          <button class="form-area__button button button--accent" type="submit">Зарегистрироваться</button>
+        </form>
+      </section>
+
+    </main>
 </body>
 </html>
