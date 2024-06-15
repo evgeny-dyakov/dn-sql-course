@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body class="body body--light">
+  <header class="header-light">
+    <div class="header-light__container container">
+      <a class="header-light__back-btn back-btn" href="index.html">
+        <span class="back-btn__arrow">
+          <img src="img/arrow-back-btn.svg" alt="back arrow">
+        </span>
+        <span class="back-btn__text">
+          Назад на сайт
+        </span>
+      </a>
+
+      <a class="logo">
+        <img src="img/logo-light.svg" alt="logo" width="184" loading="lazy" />
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="form-area form-area--login">
+      <div class="container">
+        <div class="form-area__inner">
+          <h1 class="form-area__title">Вход</h1>
+          <form action="#" method="post">
+            <p class="form-area__form-field form-field form-field--dark">
+              <label for="email">Почта</label>
+              <input type="email" name="email" id="email" autocomplete="off" required />
+            </p>
+            <p class="form-area__form-field form-area__form-field--no-margin form-field form-field--dark">
+              <label for="password">Пароль</label>
+              <input type="password" name="password" id="password" autocomplete="off" required />
+            </p>
+            <a class="form-area__link form-area__link--not-remember" href="#"><span>Не помню пароль</span></a>
+            <button class="form-area__button button button--accent" type="submit">Войти</button>
+            <span class="form-area__divider"></span>
+            <a class="form-area__link form-area__link--center" href="signup.html">Мне надо сначала <span>зарегистрироваться</span></a>
+            <span class="text-help text-help--main">Мы вас не узнали. Проверьте правильность<br> написания почты или пароля</span>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/form-error-test.js"></script>
+  </main>
+</body>
+</html>

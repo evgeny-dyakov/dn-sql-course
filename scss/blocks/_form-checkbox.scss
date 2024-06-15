@@ -1,0 +1,130 @@
+.form-checkbox {
+  position: relative;
+  margin: 0;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  color: rgb(var(--light-color));
+
+  label {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    text-underline-offset: 4px;
+  }
+}
+
+.form-checkbox__fakebox {
+  position: relative;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  transition: var(--t-timing-function) var(--t-duration);
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background: transition;
+    border-radius: 5px;
+    transition: var(--t-timing-function) var(--t-duration);
+  }
+
+  &::before {
+    top: 43%;
+    left: 28%;
+    width: 12px;
+    rotate: -45deg;
+  }
+
+  &::after {
+    top: 48%;
+    left: 7%;
+    width: 8px;
+    rotate: 45deg;
+  }
+}
+
+.form-checkbox--light {
+  font-size: 14px;
+  color: rgb(var(--light-color));
+
+  a {
+    color: rgb(var(--light-color));
+  }
+
+  label {
+    gap: 8px;
+  }
+
+  .form-checkbox__fakebox {
+    background: rgb(var(--accent-color-200));
+    border: 2px solid rgb(var(--light-color));
+  }
+
+  input:checked+span {
+    background: rgb(var(--light-color));
+
+    &::before,
+    &::after {
+      background: rgb(var(--accent-color-200));
+    }
+  }
+}
+
+.form-checkbox--dark {
+  font-size: 12px;
+  color: rgb(var(--dark-color));
+
+  a {
+    color: rgb(var(--accent-color-200));
+  }
+
+  label {
+    gap: 12px;
+  }
+
+  .form-checkbox__fakebox {
+    background: rgb(var(--light-color));
+    border: 2px solid rgb(var(--gray-color-200));
+  }
+
+  input:checked+span {
+    background: rgb(var(--accent-color-200));
+    border: 2px solid rgb(var(--accent-color-200));
+
+    &::before,
+    &::after {
+      background: rgb(var(--light-color));
+    }
+  }
+}
+
+@media(hover: hover) {
+  .form-checkbox--dark:hover {
+    .form-checkbox__fakebox {
+      border: 2px solid rgb(var(--gray-color-300));
+    }
+
+    input:checked+span {
+      background: rgb(var(--accent-color-100));
+      border: 2px solid rgb(var(--accent-color-100));
+    }
+  }
+}
+
+@media(max-width: $mobile) {
+  .form-checkbox {
+    label {
+      gap: 12px;
+    }
+
+    .text-help {
+      bottom: -22px;
+    }
+  }
+}

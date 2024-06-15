@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body class="body body--light">
+    <header class="header-light">
+      <div class="header-light__container container">
+        <a class="header-light__back-btn back-btn" href="index.html">
+          <span class="back-btn__arrow">
+            <img src="img/arrow-back-btn.svg" alt="back arrow">
+          </span>
+          <span class="back-btn__text">
+            Назад на сайт
+          </span>
+        </a>
+
+        <a class="logo">
+          <img src="img/logo-light.svg" alt="logo" width="184" loading="lazy" />
+        </a>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="form-area form-area--signup">
+        <div class="container">
+          <div class="form-area__inner">
+            <h1 class="form-area__title">Регистрация</h1>
+            <form action="#" method="post">
+              <p class="form-area__form-field form-field form-field--dark">
+                <label for="email">Почта</label>
+                <input type="email" name="email" id="email" autocomplete="off" required />
+              </p>
+              <p class="form-area__form-field form-field form-field--dark">
+                <label for="password">Пароль</label>
+                <input type="password" name="password" id="password" autocomplete="off" required />
+              </p>
+              <p class="form-area__form-field form-field form-field--dark">
+                <label for="password-repeat">Повторите пароль</label>
+                <input type="password" name="password-repeat" id="password-repeat" autocomplete="off" required />
+              </p>
+              <button class="form-area__button button button--accent" type="submit">Зарегистрироваться</button>
+              <p class="form-area__form-checkbox form-checkbox form-checkbox--dark">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="agree" value="true" required />
+                  <span class="form-checkbox__fakebox"></span>
+                  <span>Даю согласие<br> <a href="https://ya.ru/" target="_blank">на обработку персональных данных</a></span>
+                </label>
+              </p>
+              <span class="form-area__divider"></span>
+              <a class="form-area__link form-area__link--center" href="login.html">У меня уже есть аккаунт. <span>Войти</span></a>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <script src="js/form-error-test.js"></script>
+    </main>
+</body>
+</html>

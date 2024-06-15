@@ -1,0 +1,53 @@
+.button {
+  display: inline-block;
+  padding: 16px 32px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(var(--accent-color-200));
+  text-decoration: none;
+  background: rgb(var(--light-color));
+  border: none;
+  border-radius: 8px;
+  transition: var(--t-timing-function) var(--t-duration);
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+
+  &--small {
+    padding: 12px 24px;
+  }
+
+  &--accent {
+    color: rgb(var(--light-color));
+    background: rgb(var(--accent-color-200));
+  }
+
+  &--transparent {
+    color: rgb(var(--light-color));
+    background: none;
+    box-shadow: inset 0 0 0 2px rgb(var(--light-color));
+  }
+}
+
+@media(hover: hover) {
+  .button:hover {
+    color: rgb(var(--light-color));
+    background: rgb(var(--accent-color-100));
+  }
+
+  .button--transparent:hover {
+    color: rgb(var(--accent-color-200));
+    background: rgb(var(--light-color));
+  }
+}
+
+.button:active {
+  color: rgb(var(--light-color));
+  background: rgb(var(--accent-color-300));
+}
+
+.button--transparent:active {
+  box-shadow: none;
+}

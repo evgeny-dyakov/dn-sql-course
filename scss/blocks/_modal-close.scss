@@ -1,0 +1,39 @@
+.modal-close {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: rgb(var(--light-color) / 15%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--t-timing-function) var(--t-duration);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 2px;
+    background: rgb(var(--light-color));
+    border-radius: 5px;
+    translate: -50% -50%;
+  }
+
+  &::before {
+    rotate: 45deg;
+  }
+
+  &::after {
+    rotate: -45deg;
+  }
+}
+
+@media(hover: hover) {
+  .modal-close:hover {
+    background: rgb(255 255 255 / 20%);
+  }
+}

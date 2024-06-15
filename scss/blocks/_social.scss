@@ -1,0 +1,52 @@
+.social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__link {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: rgb(var(--light-color));
+  background: rgb(var(--light-color) / 15%);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: var(--t-timing-function) var(--t-duration);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+
+  svg path {
+    fill: currentcolor;
+  }
+}
+
+@media(hover: hover) {
+  .social__link:hover {
+    background: rgb(var(--light-color) / 20%);
+  }
+}
+
+.social__link:active {
+  background: rgb(var(--light-color) / 50%);
+}
+
+.social--transparent .social__link {
+  background: none;
+}
+
+@media(hover: hover) {
+  .social--transparent .social__link:hover {
+    color: rgb(var(--accent-color-200));
+  }
+}
+
+.social--transparent .social__link:active {
+  color: rgb(var(--accent-color-200));
+}

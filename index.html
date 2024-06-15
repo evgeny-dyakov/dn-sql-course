@@ -42,8 +42,8 @@
                   </a>
                 </li>
               </ul>
-              <a class="header__login button button--small button--accent" href="registration.html">Войти</a>
-              <a class="header__get-study button button--small" href="https://ya.ru/?npr=1" target="_blank">Начать обучение</a>
+              <a class="header__login button button--small button--accent" href="login.html">Войти</a>
+              <a class="header__get-study button button--small" href="login.html">Начать обучение</a>
               <div class="header__ask-question">
                 <p>Остались вопросы?</p>
                 <button class="ask-button ask-button--mobile" type="button">Напиши</button>
@@ -54,7 +54,7 @@
         <div class="header__overlay header__overlay--none header__overlay--transparent"></div>
       </header>
 
-      <main class="main" id="main">
+      <main id="main">
         <section class="preview">
           <div class="preview__container container">
             <h1 class="preview__title title title--h1">
@@ -62,7 +62,7 @@
               <span>по SQL<img src="./img/new.svg" width="50" alt="new" loading="lazy" /></span>
             </h1>
             <p class="preview__description">На курсе вы освоите составление продвинутых <span class="nobr">SQL-запросов</span> для различных задач, а уроки с понятной анимацией помогут легко запомнить темы. Приятным бонусом будет возможность задавать вопросы автору на онлайн-встречах.</p>
-            <a class="preview__button button button--small" href="https://ya.ru/?npr=1" target="_blank">Начать обучение</a>
+            <a class="preview__button button button--small" href="login.html">Начать обучение</a>
             <ul class="social">
               <li>
                 <a class="social__link" href="https://www.youtube.com/@datanotes_ru" target="_blank">
@@ -263,7 +263,7 @@
           <label for="question">Вопрос</label>
           <textarea name="question" id="question" maxlength="250" required required data-pristine-required-message="задайте вопрос"></textarea>
         </p>
-        <p class="modal-ask__form-checkbox form-checkbox form-validation">
+        <p class="modal-ask__form-checkbox form-checkbox form-checkbox--light form-validation">
           <label>
             <input class="visually-hidden" type="checkbox" name="agree" value="true" required data-pristine-required-message="необходимо ваше согласие" />
             <span class="form-checkbox__fakebox"></span>

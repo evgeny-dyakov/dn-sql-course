@@ -2,8 +2,20 @@
   'fonts',
   'variables',
   'general',
+
+  'blocks/body',
+  'blocks/container',
+  'blocks/title',
+  'blocks/logo',
+  'blocks/main-text',
+  'blocks/button',
+  'blocks/social',
+  'blocks/modal-close',
+  'blocks/form-field',
+  'blocks/form-checkbox',
+  'blocks/back-btn',
+
   'blocks/header',
-  'blocks/header-light',
   'blocks/preview',
   'blocks/whom',
   'blocks/about',
@@ -14,4 +26,9 @@
   'blocks/faq',
   'blocks/footer',
   'blocks/modal',
-  'blocks/form-area';
+
+  'blocks/header-light',
+  'blocks/form-area',
+
+  'pristine';
+

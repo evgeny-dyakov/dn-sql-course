@@ -1,0 +1,17 @@
+.body {
+  min-width: 360px;
+  padding: 0;
+  margin: 0;
+
+  &--dark {
+    background: rgb(var(--dark-color));
+  }
+
+  &--light {
+    background: rgb(var(--light-color));
+  }
+
+  &--no-scroll {
+    overflow: hidden;
+  }
+}
